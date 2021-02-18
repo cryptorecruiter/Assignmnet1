@@ -12,8 +12,9 @@ test:
 
 .PHONY: run
 run:
-	 cargo run --release -- --dev --tmp
+	 WASM_BUILD_TOOLCHAIN=nightly-2020-05-10 cargo run --release -- --dev --tmp
 
 .PHONY: build
 build:
-	 cargo build --release
+	 WASM_BUILD_TOOLCHAIN=nightly-2020-05-10 cargo build --release
+	 
